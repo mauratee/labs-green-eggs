@@ -92,9 +92,10 @@ print(f'dictionary of word chains = {test_function}') # Print resulting dictiona
 # if test_function == example_dict:
 #     print('it matches')
 
-import random
-def make_text(chains):
-    """Return text from chains."""
+import random # import random module
+
+def make_text(chains): # define new function to create Markov chain
+    """Take input as dictionary, return text of newly generated Markov chain."""
 
     link_words = [] # Create empty list to hold Markov chain words
     length = len(chains) # Assign variable to number of keys in dictionary "chains"
@@ -106,17 +107,11 @@ def make_text(chains):
     
     random_value = random.choice(chains[rand_key]) # Assign variable to randomly chosen value
                                                    # from list of value at location of 'rand_key'
-    print(f'rand value = {random_value}')
-    link_words.append(random_value)
+    print(f'rand value = {random_value}') # Print random value
+    link_words.append(random_value) # Append random value to Markov chain list
 
+    print(f'link = {link_words}') # Print list of Markov chain words
     
-    print(f'link = {link_words}')
-    # pick random key from dictionary
-    # add tuple values of selected key to "link_words" list
-    # look up value for key in dictionary
-    # add random value from dictionary list to "link_words" list
-    # use last two words of "link_words" list as new key
-    # repeat!
     new_key = (link_words[-2], link_words[-1])
     print(f'new_key = {new_key}')
     
