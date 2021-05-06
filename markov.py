@@ -111,145 +111,148 @@ def make_text(chains): # define new function to create Markov chain
     link_words.append(random_value) # Append random value to Markov chain list
 
     print(f'link = {link_words}') # Print list of Markov chain words
-    
-    new_key = (link_words[-2], link_words[-1])
-    print(f'new_key = {new_key}')
-    
-    if new_key in chains:
-        link_chains = random.choice(chains[new_key])
-        link_words.append(link_chains)
-        print(f'link words = {link_words}')
 
-    new_key = (link_words[-2], link_words[-1])
-    print(f'new_key = {new_key}')
-    
-    if new_key in chains:
-        link_chains = random.choice(chains[new_key])
-        link_words.append(link_chains)
-        print(f'link words = {link_words}')
-
-    new_key = (link_words[-2], link_words[-1])
-    print(f'new_key = {new_key}')
-    
-    if new_key in chains:
-        link_chains = random.choice(chains[new_key])
-        link_words.append(link_chains)
-        print(f'link words = {link_words}')
-
-    
-    new_key = (link_words[-2], link_words[-1])
-    print(f'new_key = {new_key}')
-    
-    if new_key in chains:
-        link_chains = random.choice(chains[new_key])
-        link_words.append(link_chains)
-        print(f'link words = {link_words}')
-
-    new_key = (link_words[-2], link_words[-1])
-    print(f'new_key = {new_key}')
-    
-    if new_key in chains:
-        link_chains = random.choice(chains[new_key])
-        link_words.append(link_chains)
-        print(f'link words = {link_words}')
-
-    new_key = (link_words[-2], link_words[-1])
-    print(f'new_key = {new_key}')
-
-    if new_key in chains:
-        link_chains = random.choice(chains[new_key])
-        link_words.append(link_chains)
-        print(f'link words = {link_words}')
-
-    new_key = (link_words[-2], link_words[-1])
-    print(f'new_key = {new_key}')
-
-    if new_key in chains:
-        link_chains = random.choice(chains[new_key])
-        link_words.append(link_chains)
-        print(f'link words = {link_words}')
-
-    new_key = (link_words[-2], link_words[-1])
-    print(f'new_key = {new_key}')
-
-    if new_key in chains:
-        link_chains = random.choice(chains[new_key])
-        link_words.append(link_chains)
-        print(f'link words = {link_words}')
-
-    new_key = (link_words[-2], link_words[-1])
-    print(f'new_key = {new_key}')
-    
-    if new_key in chains:
-        link_chains = random.choice(chains[new_key])
-        link_words.append(link_chains)
-        print(f'link words = {link_words}')
-    
-    new_key = (link_words[-2], link_words[-1])
-    print(f'new_key = {new_key}')
-    
-    if new_key in chains:
-        link_chains = random.choice(chains[new_key])
-        link_words.append(link_chains)
-        print(f'link words = {link_words}')
-
-    new_key = (link_words[-2], link_words[-1])
-    print(f'new_key = {new_key}')
-
-    if new_key in chains:
-        link_chains = random.choice(chains[new_key])
-        link_words.append(link_chains)
-        print(f'link words = {link_words}')
-
-    new_key = (link_words[-2], link_words[-1])
-    print(f'new_key = {new_key}')
-
-    if new_key in chains:
-        link_chains = random.choice(chains[new_key])
-        link_words.append(link_chains)
-        print(f'link words = {link_words}')
-
-    new_key = (link_words[-2], link_words[-1])
-    print(f'new_key = {new_key}')
-
-    if new_key in chains:
-        link_chains = random.choice(chains[new_key])
-        link_words.append(link_chains)
-        print(f'link words = {link_words}')
-
-    new_key = (link_words[-2], link_words[-1])
-    print(f'new_key = {new_key}')
-
-    if new_key in chains:
-        link_chains = random.choice(chains[new_key])
-        link_words.append(link_chains)
-        print(f'link words = {link_words}')
-
-    new_key = (link_words[-2], link_words[-1])
-    print(f'new_key = {new_key}')
-
-    if new_key in chains:
-        link_chains = random.choice(chains[new_key])
-        link_words.append(link_chains)
-        print(f'link words = {link_words}')
-
-    new_key = (link_words[-2], link_words[-1])
-    print(f'new_key = {new_key}')
-
-    if new_key in chains:
-        link_chains = random.choice(chains[new_key])
-        link_words.append(link_chains)
-        print(f'link words = {link_words}')
-
-    new_key = (link_words[-2], link_words[-1])
-    print(f'new_key = {new_key}')
-
-    def create_new_key(words_from_list):
-        words_from_list = (link_words[-2], link_words[-1])
-        if words_from_list in chains:
-            link_chains = random.choice(chains[words_from_list])
-            link_words.append(link_chains)
+    def create_new_key(Markov_chain_list):
+        Markov_chain_list = link_words
+        new_key = (link_words[-2], link_words[-1])
+        if new_key in chains:
+            new_word = random.choice(chains[new_key])
+            link_words.append(new_word)
         return 
+    
+    new_key = (link_words[-2], link_words[-1])
+    print(f'new_key = {new_key}')
+    
+    if new_key in chains:
+        link_chains = random.choice(chains[new_key])
+        link_words.append(link_chains)
+        print(f'link words = {link_words}')
+
+    new_key = (link_words[-2], link_words[-1])
+    print(f'new_key = {new_key}')
+    
+    if new_key in chains:
+        link_chains = random.choice(chains[new_key])
+        link_words.append(link_chains)
+        print(f'link words = {link_words}')
+
+    new_key = (link_words[-2], link_words[-1])
+    print(f'new_key = {new_key}')
+    
+    if new_key in chains:
+        link_chains = random.choice(chains[new_key])
+        link_words.append(link_chains)
+        print(f'link words = {link_words}')
+
+    
+    new_key = (link_words[-2], link_words[-1])
+    print(f'new_key = {new_key}')
+    
+    if new_key in chains:
+        link_chains = random.choice(chains[new_key])
+        link_words.append(link_chains)
+        print(f'link words = {link_words}')
+
+    new_key = (link_words[-2], link_words[-1])
+    print(f'new_key = {new_key}')
+    
+    if new_key in chains:
+        link_chains = random.choice(chains[new_key])
+        link_words.append(link_chains)
+        print(f'link words = {link_words}')
+
+    new_key = (link_words[-2], link_words[-1])
+    print(f'new_key = {new_key}')
+
+    if new_key in chains:
+        link_chains = random.choice(chains[new_key])
+        link_words.append(link_chains)
+        print(f'link words = {link_words}')
+
+    new_key = (link_words[-2], link_words[-1])
+    print(f'new_key = {new_key}')
+
+    if new_key in chains:
+        link_chains = random.choice(chains[new_key])
+        link_words.append(link_chains)
+        print(f'link words = {link_words}')
+
+    new_key = (link_words[-2], link_words[-1])
+    print(f'new_key = {new_key}')
+
+    if new_key in chains:
+        link_chains = random.choice(chains[new_key])
+        link_words.append(link_chains)
+        print(f'link words = {link_words}')
+
+    new_key = (link_words[-2], link_words[-1])
+    print(f'new_key = {new_key}')
+    
+    if new_key in chains:
+        link_chains = random.choice(chains[new_key])
+        link_words.append(link_chains)
+        print(f'link words = {link_words}')
+    
+    new_key = (link_words[-2], link_words[-1])
+    print(f'new_key = {new_key}')
+    
+    if new_key in chains:
+        link_chains = random.choice(chains[new_key])
+        link_words.append(link_chains)
+        print(f'link words = {link_words}')
+
+    new_key = (link_words[-2], link_words[-1])
+    print(f'new_key = {new_key}')
+
+    if new_key in chains:
+        link_chains = random.choice(chains[new_key])
+        link_words.append(link_chains)
+        print(f'link words = {link_words}')
+
+    new_key = (link_words[-2], link_words[-1])
+    print(f'new_key = {new_key}')
+
+    if new_key in chains:
+        link_chains = random.choice(chains[new_key])
+        link_words.append(link_chains)
+        print(f'link words = {link_words}')
+
+    new_key = (link_words[-2], link_words[-1])
+    print(f'new_key = {new_key}')
+
+    if new_key in chains:
+        link_chains = random.choice(chains[new_key])
+        link_words.append(link_chains)
+        print(f'link words = {link_words}')
+
+    new_key = (link_words[-2], link_words[-1])
+    print(f'new_key = {new_key}')
+
+    if new_key in chains:
+        link_chains = random.choice(chains[new_key])
+        link_words.append(link_chains)
+        print(f'link words = {link_words}')
+
+    new_key = (link_words[-2], link_words[-1])
+    print(f'new_key = {new_key}')
+
+    if new_key in chains:
+        link_chains = random.choice(chains[new_key])
+        link_words.append(link_chains)
+        print(f'link words = {link_words}')
+
+    new_key = (link_words[-2], link_words[-1])
+    print(f'new_key = {new_key}')
+
+    if new_key in chains:
+        link_chains = random.choice(chains[new_key])
+        link_words.append(link_chains)
+        print(f'link words = {link_words}')
+
+    new_key = (link_words[-2], link_words[-1])
+    print(f'new_key = {new_key}')
+
+    
 
         #function above is going to iterate through new key and value variables, and
         #append into link_chains after every iteration
