@@ -112,7 +112,16 @@ def make_text(chains): # define new function to create Markov chain
 
     # print(f'link = {link_words}') # Print list of Markov chain words
 
+    # Create function to continuously generate new keys and check if ket exists in dictionary
     def create_new_key(Markov_chain_list):
+        """ Take input as Markov chain word list, return list or None.
+        
+            Create new key from Markov chain list, check if new key in dictionary,
+            if so, append random value from new key value list of dictionary to Markov
+            chain list.
+            
+            If key not in dictionary, return None"""
+
         new_key = (Markov_chain_list[-2], Markov_chain_list[-1])
         # print(f'new_key = {new_key}')
         if new_key in chains:
@@ -126,14 +135,14 @@ def make_text(chains): # define new function to create Markov chain
     # link_plus = create_new_key(link_words) 
     # print(f'link plus = {link_plus}')
 
-    while create_new_key(link_words) is not None:
-        create_new_key(link_words)
+    while create_new_key(link_words) is not None: # While create_new_key is not returning None,
+        create_new_key(link_words) # Re-run function to create new key and append to link_words
     
 
     return ' '.join(link_words)
 
 
-input_path = 'gettysburg.txt'
+input_path = 'green-eggs.txt'
 
 # Open the file and turn it into one long string
 input_text = open_and_read_file(input_path)
